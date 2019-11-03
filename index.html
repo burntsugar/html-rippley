@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Staatliches&display=swap" rel="stylesheet">
+</head>
+<style>
+    :root {
+        --color-clg-darker-pink: rgb(218, 87, 99);
+        --color-clg-lighter-pink: rgb(247, 206, 209);
+        --color-clg-midnight-blue: rgb(37, 34, 98);
+        --page-top-margins: 20px;
+        --page-bottom-margins: 20px;
+        --page-regular-text-color: var(--color-clg-midnight-blue);
+        --page-regular-heading: 'Staatliches', cursive;
+        --page-regular-text: 'Montserrat', sans-serif;
+        --page-p-tb-padding: 10px;
+        --page-h-tb-padding: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 2.5em;
+        font-family: var(--page-regular-heading);
+        padding-top: var(--page-h-tb-padding);
+        padding-bottom: var(--page-h-tb-padding)
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h1+p {
+        padding-top: 0px;
+    }
+
+    h2+p {
+        padding-top: 0px;
+    }
+
+    h3+p {
+        padding-top: 0px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.0em;
+    }
+
+    * {
+        padding: 0px;
+        margin: 0px;
+        color: var(--page-regular-text-color);
+        font-family: var(--page-regular-text);
+    }
+
+    body {
+        background-color: white;
+    }
+
+    p {
+        padding-top: var(--page-p-tb-padding)
+    }
+
+    #page-wrapper {
+        box-sizing: border-box;
+        width: 80vw;
+        margin: auto;
+    }
+
+    #page-top {
+        height: var(--page-top-margins)
+    }
+
+    #page-bottom {
+        height: var(--page-bottom-margins)
+    }
+
+    #page-header {
+        box-sizing: border-box;
+        width: calc(100% - var(0));
+        margin-bottom: var(--page-bottom-margins);
+    }
+
+    #page-content {
+        box-sizing: border-box;
+        width: calc(100% - var(0));
+        margin-bottom: var(--page-bottom-margins);
+    }
+
+    #page-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        box-sizing: border-box;
+        width: calc(100% - var(0));
+        margin-bottom: var(--page-bottom-margins);
+    }
+
+    #copyright {
+        font-size: 0.8em;
+        font-style: italic;
+    }
+
+    #page-nav {}
+
+    #main-nav {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        background-color: var(--color-clg-lighter-pink);
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    #main-nav a {
+        color: var(--color-clg-midnight-blue);
+        font-size: 1.5em;
+        font-family: var(--page-regular-heading);
+        text-decoration: none;
+    }
+
+    #main-nav a:hover {
+        color: var(--color-clg-darker-pink);
+    }
+
+    #main-nav h1 {
+        padding: 0px;
+    }
+
+    #main-nav-right ul {
+        list-style-type: none;
+    }
+
+    #main-nav-right li {
+        display: inline;
+        padding-left: 5px;
+    }
+
+    #secondary-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        background-color: var(--color-clg-darker-pink);
+        padding: 10px;
+    }
+
+    #secondary-nav a {
+        color: var(--color-clg-midnight-blue);
+        font-size: 1em;
+        font-family: var(--page-regular-heading);
+        text-decoration: none;
+    }
+
+    #secondary-nav a:hover {
+        color: var(--color-clg-lighter-pink);
+    }
+
+    #secondary-nav ul {
+        list-style-type: none;
+    }
+
+    #secondary-nav li {
+        display: inline;
+        padding-left: 5px;
+    }
+</style>
+
+<body>
+
+    <div id="page-wrapper">
+        <div id="page-top"></div>
+        <div id="page-header">
+            <div id="page-nav">
+                <div id="main-nav">
+                    <div id="main-nav-left">
+                        <h1>Main Nav Left</h1>
+                    </div>
+                    <div id="main-nav-right">
+                        <ul>
+                            <li><a href="">one</a></li>
+                            <li><a href="">two</a></li>
+                            <li><a href="">three</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="secondary-nav">
+                    <ul>
+                        <li><a href="">stuff</a></li>
+                        <li><a href="">things</a></li>
+                        <li><a href="">foo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="page-content">
+            <h1>A study of :root, flex, css variables and element&#43;element</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque iaculis viverra. In hac
+                habitasse platea dictumst. Phasellus viverra turpis sit amet velit ornare, eget pharetra massa vehicula.
+                Etiam ut eleifend libero, quis mattis sapien. Phasellus malesuada, nisi in molestie pharetra, metus mi
+                blandit nunc, sodales faucibus nulla nisl sed purus. Sed nec vestibulum mi. Aliquam id leo erat.
+                Curabitur iaculis quis lectus et tincidunt. Phasellus feugiat nibh ante, non facilisis lectus auctor a.
+                Duis lectus libero, venenatis sit amet justo in, bibendum hendrerit orci.</p>
+
+            <h2>Duis vestibulum cursus quam, sed sodales lectus aliquet aliquam. Suspendisse vitae nulla rhoncus,
+                ultrices</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque iaculis viverra. In hac
+                habitasse platea dictumst. Phasellus viverra turpis sit amet velit ornare, eget pharetra massa vehicula.
+                Etiam ut eleifend libero, quis mattis sapien. Phasellus malesuada, nisi in molestie pharetra, metus mi
+                blandit nunc, sodales faucibus nulla nisl sed purus. Sed nec vestibulum mi. Aliquam id leo erat.
+                Curabitur iaculis quis lectus et tincidunt. Phasellus feugiat nibh ante, non facilisis lectus auctor a.
+                Duis lectus libero, venenatis sit amet justo in, bibendum hendrerit orci.</p>
+
+            <h3>Lorem ipsum dolor sit amet</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque iaculis viverra. In hac
+                habitasse platea dictumst. Phasellus viverra turpis sit amet velit ornare, eget pharetra massa vehicula.
+                Etiam ut eleifend libero, quis mattis sapien. Phasellus malesuada, nisi in molestie pharetra, metus mi
+                blandit nunc, sodales faucibus nulla nisl sed purus. Sed nec vestibulum mi. Aliquam id leo erat.
+                Curabitur iaculis quis lectus et tincidunt. Phasellus feugiat nibh ante, non facilisis lectus auctor a.
+                Duis lectus libero, venenatis sit amet justo in, bibendum hendrerit orci.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque iaculis viverra. In hac
+                habitasse platea dictumst. Phasellus viverra turpis sit amet velit ornare, eget pharetra massa vehicula.
+                Etiam ut eleifend libero, quis mattis sapien. Phasellus malesuada, nisi in molestie pharetra, metus mi
+                blandit nunc, sodales faucibus nulla nisl sed purus. Sed nec vestibulum mi. Aliquam id leo erat.
+                Curabitur iaculis quis lectus et tincidunt. Phasellus feugiat nibh ante, non facilisis lectus auctor a.
+                Duis lectus libero, venenatis sit amet justo in, bibendum hendrerit orci.</p>
+
+        </div>
+        <div id="page-footer">
+            <span id="copyright">&copy 2019 footer@footer.com</span>
+        </div>
+        <div id="page-bottom"></div>
+    </div>
+</body>
+
+</html>
